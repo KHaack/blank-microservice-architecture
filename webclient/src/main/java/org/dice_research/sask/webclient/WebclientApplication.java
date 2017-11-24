@@ -9,17 +9,18 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class WebclientServerApplication {
-
-	public static final String DISCOVERY_SERVICE_URL = "http://discovery-microservice";
+public class WebclientApplication 
+{
+	public static final String ACCOUNTS_SERVICE_URL = "http://DISCOVERY-MICROSERVICE";
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebclientServerApplication.class, args);
+		SpringApplication.run(WebclientApplication.class, args);
 	}
-
+	
 	@Bean
 	@LoadBalanced
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
+
 }

@@ -2,7 +2,7 @@
 # Control the InternalResourceViewResolver:
 spring:
   application:
-    name: webclient
+    name: discovery-web
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -18,3 +18,4 @@ eureka:
 error:
   whitelabel:
     enabled:  false
+      
