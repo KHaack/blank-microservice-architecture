@@ -5,13 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DiscoveryController {
-	protected Logger logger = Logger.getLogger(DiscoveryController.class.getName());
+public class WebclientController {
+	
+	protected Logger logger = Logger.getLogger(WebclientController.class.getName());
 
-	@RequestMapping("/hello")
-	public String hello() {
-		this.logger.info("discovery-microservice hello() invoked");
-		return "Hello Projectgroup!";
+	@RequestMapping("/")
+	public String index() {
+		this.logger.info("webclient index() invoked");
+		return "index";
 	}
 	
 	@RequestMapping("/info")
