@@ -12,6 +12,7 @@
 </head>
 
 <body>
-		Hallo Welt
+		<h1>Hello world</h1>
+		<li><a href="/datatest">View data test</a></li>
 </body>
 </html>

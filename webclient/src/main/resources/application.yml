@@ -2,7 +2,7 @@
 # Control the InternalResourceViewResolver:
 spring:
   application:
-    name: discovery-web
+    name: webclient
   mvc:
     view:
       prefix: /WEB-INF/views/

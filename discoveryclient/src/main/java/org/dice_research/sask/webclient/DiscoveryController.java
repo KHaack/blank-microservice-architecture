@@ -8,10 +8,24 @@ import org.springframework.web.bind.annotation.RestController;
 public class DiscoveryController {
 	protected Logger logger = Logger.getLogger(DiscoveryController.class.getName());
 
+	@RequestMapping("/")
+	public String root() {
+		this.logger.info("discovery-microservice root() invoked");
+		return "some root stuff here.";
+	}
+	
 	@RequestMapping("/hello")
-	public String hello() {
+	public String helloString() {
 		this.logger.info("discovery-microservice hello() invoked");
-		return "Hello Projectgroup!";
+		return "Hello projectgroup!";
+	}
+	
+	@RequestMapping("/hellojson")
+	public Hello helloJSON() {
+		this.logger.info("discovery-microservice hellojson() invoked");
+		Hello h = new Hello();
+		h.setMessage("Hello Projectgroup (as json)!");
+		return h;
 	}
 	
 	@RequestMapping("/info")
