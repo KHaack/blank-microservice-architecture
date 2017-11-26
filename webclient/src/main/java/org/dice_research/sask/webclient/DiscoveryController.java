@@ -15,7 +15,12 @@ public class DiscoveryController {
 	protected HelloRepository helloRepository;
 
 	@RequestMapping("/")
-	public String home() {
+	public String root() {
+		return "index";
+	}
+	
+	@RequestMapping("/index")
+	public String index() {
 		return "index";
 	}
 	
